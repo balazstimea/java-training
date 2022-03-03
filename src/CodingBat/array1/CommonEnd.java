@@ -1,5 +1,5 @@
 package CodingBat.array1;
-
+//test
 public class CommonEnd {
     public static void main(String[] args) {
 

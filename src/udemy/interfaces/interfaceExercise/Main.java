@@ -14,8 +14,12 @@ public class Main {
         System.out.println(tim);
         tim.setWeapon("Stormbriger");
         saveObject(tim);
-        loadObject(tim);
+        //loadObject(tim);
         System.out.println(tim);
+
+        ISaveable werewolf=new Monster("Warewolf", 20, 40);
+        System.out.println("Strength = "+ ((Monster) werewolf).getStrength());
+        saveObject(werewolf);
 
     }
     public static ArrayList<String> readValues(){

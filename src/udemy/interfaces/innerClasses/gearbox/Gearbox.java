@@ -1,4 +1,4 @@
-package udemy.interfaces.innerClasses;
+package udemy.interfaces.innerClasses.gearbox;
 
 import java.util.ArrayList;
 
@@ -13,11 +13,16 @@ public class Gearbox {
         this.maxGears = maxGears;
         Gear neutral = new Gear(0,0.0);
         this.gears.add(neutral);
+
+        for (int i=0; i<maxGears; i++){
+            addGear(i,i*5.3);
+        }
     }
 
     public void operateClutch(boolean in){
         this.clutchIsIn = in;
     }
+
     public void addGear(int number, double ratio){
         if ((number>0)&&(number<=maxGears)){
             this.gears.add(new Gear(number, ratio));
